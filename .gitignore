@@ -1,7 +1,15 @@
-node_modules
-build
-gulp
-.gulp
-gulpfile.js
-package-lock.json
-package.json
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы редактора
+.idea
+*.sublime*
+.vscode
+
+# Вспомогательные файлы
+*.log*
+node_modules/
+
+# Папка с собранными файлами проекта
+build/
