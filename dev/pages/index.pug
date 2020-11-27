@@ -1,0 +1,62 @@
+extends common/layout
+include common/mixins
+
+block content
+	main
+		.container
+			.hero
+				p.hero_begins Вся информация пришла вам в личные сообщения. А у меня для вас есть специальное  предложение!
+				h1.hero_headliner Три мастер класса со скидкой 
+					span.text--green 90% 
+					| за 
+					span.text--green 199 р 
+					| вместо 
+					span.text--yellow 2000 р
+				//- img.hero_img(src="img/hero.png" alt="Ekaterina")
+				+pic({src: "img/hero", imgClass: "hero_img", alt: "Ekaterina"})
+				a(href="").hero_cta Купить за 199 р
+				p.timer_title Единоразовое предложение будет действовать:
+				
+				.timer#timer
+					.timer-hours
+						.timer-value.timer-hours_value 00
+						.timer_name часы
+					.timer-minutes
+						.timer-value.timer-minutes_value 00
+						.timer_name минуты
+					.timer-seconds
+						.timer-value.timer-seconds_value 00
+						.timer_name секунды
+				.hero_blobs
+				.hero_balls
+
+
+			.cakes
+				.cakes-item
+					//- img(src="img/cake-1.png" alt="cake").cakes-item_pic
+					+pic({src: "img/cake-1", imgClass: "cakes-item_pic", alt: "cake"})
+					p.cakes-item_text Три шоколада
+				.cakes-item
+					//- img(src="img/cake-2.png" alt="cake").cakes-item_pic
+					+pic({src: "img/cake-2", imgClass: "cakes-item_pic", alt: "cake"})
+					p.cakes-item_text Лимонный чизкейк
+				.cakes-item
+					//- img(src="img/cake-3.png" alt="cake").cakes-item_pic
+					+pic({src: "img/cake-3", imgClass: "cakes-item_pic", alt: "cake"})
+					p.cakes-item_text Шоколадный торт
+				.cakes_blobs
+				.cakes_balls
+
+
+			.prize
+				a(href="").prize_cta Купить за 199 р
+				h2.prize_title Бонусы, которые ты получишь
+					span.text--yellow :
+				//- img(src="img/prize.png" alt="prize").prize_img 
+				+pic({src: "img/prize", imgClass: "prize_img", alt: "prize"})
+				ul.prize-bullets
+					li.prize_item Сертификат о прохождении марафона
+					li.prize_item Неограниченный доступ ко всем материалам марафона
+					li.prize_item 5 проверенных рецептов
+				.prize_blobs
+				.prize_balls

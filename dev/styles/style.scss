@@ -1,0 +1,365 @@
+@import "untils/modules.scss";
+@import "untils/vars.scss";
+@import "untils/mixins.scss";
+
+
+#my_timer{
+	color: #000;
+}
+.hero{
+	padding-top: 22px;
+	padding-bottom: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;	
+}
+.hero_blobs{
+	position: absolute;	
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	background-image: url(../img/hero-blobs.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.hero_balls{
+	position: absolute;	
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url(../img/hero-balls.png);
+	z-index: 1;
+}
+
+.hero_begins{
+	@extend .e-text;
+	margin-bottom: 20px;
+	font-family: 'Geometria Medium', sans-serif;
+	position: relative;
+}
+.hero_begins:before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 115%;
+	left: 0;
+	right: 0;
+	width: 0; 
+ 	height: 0; 
+ 	margin: 0 auto;
+ 	border-left: 10px solid transparent;
+ 	border-right: 10px solid transparent;
+ 	border-top: 10px solid var(--c-text);
+
+}
+.hero_begins:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 97%;
+	left: 0;
+	right: 0;
+	width: 0; 
+ 	height: 0; 
+ 	margin: 0 auto;
+ 	border-left: 16px solid transparent;
+ 	border-right: 16px solid transparent;
+ 	border-top: 14px solid #fff;
+
+ }
+
+
+
+.hero_headliner{
+  font-family: 'Geometria Bold', sans-serif;
+	@extend .e-text;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 15px;
+	// position: relative;
+}
+.text--green{
+	color: var(--c-second);
+	font-family: 'Geometria Medium', sans-serif;
+}
+.text--yellow{
+	color: var(--c-prim);
+	font-family: 'Geometria Medium', sans-serif;
+	position: relative;
+}
+.hero .text--yellow:before{
+	content: '';
+	position: absolute;
+	bottom: 0.5em;
+	left: -0.2em;
+	display: block;
+	width: 110%;
+	height: 2px;
+	background-color: var(--c-text);
+}
+.hero_img{
+	margin-bottom: 0px;
+	position: relative;
+	z-index: 2;
+	width: 90%;
+}
+.hero_cta{
+	@extend .e-button;
+	margin-bottom: 28px;
+	position: relative;
+	z-index: 2;
+}
+
+.timer_title{
+	@extend .e-text;
+	margin-bottom: 13px;
+	font-family: 'Geometria Medium', sans-serif;
+	position: relative;
+	z-index: 3;
+}
+.timer{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+.timer-minutes{
+	margin-right: 7px;
+	margin-left: 7px;
+}
+.timer-value{
+	background-color: var(--c-prim);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1;
+	padding: 10px 8px;
+	border-radius: 5px;
+	color: var(--c-text);
+	font-family: 'Geometria Medium', sans-serif;
+}
+.timer_name{
+	font-size: 10px;
+	font-weight: 500;
+	color: var(--c-text);
+}
+
+
+
+
+
+.cakes{
+	position: relative;
+	background-image: linear-gradient(0deg, var(--c-bg-1) 0%, var(--c-bg-2) 100% );
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -90px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.cakes-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+.cakes-item_pic{
+	width: 60%;
+}
+.cakes-item_text{
+	color: #fff;
+	font-weight: 600;
+	font-size: 15px;
+	text-align: center;	
+	margin-bottom: 30px;
+}
+.cakes_blobs{
+	position: absolute;	
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 1;
+	background-image: url(../img/cakes-blobs.png);
+}
+.cakes_balls{
+	position: absolute;	
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 1;
+	background-image: url(../img/cakes-balls.png);
+}
+
+
+.prize{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 30px;
+}
+
+.prize_cta{
+	@extend .e-button;
+	margin-bottom: 24px;
+	position: relative;
+	z-index: 3;
+
+}
+
+.prize_title{
+	@extend .e-text;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 3;
+  font-family: 'Geometria Bold', sans-serif;
+
+}
+.prize_img{
+	width: 70%;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: 3;
+}
+.prize_item{
+	@extend .e-text;
+	text-align: left;
+	margin-bottom: 13px;
+	padding-left: 34px;
+	box-sizing: border-box;
+	position: relative;
+  font-family: 'Geometria Medium', sans-serif;
+  line-height: 1.3;
+  max-width: 210px;
+}
+.prize_item:before{
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	display: block;
+	background-color: var(--c-prim);
+	position: absolute;
+	left: .8em;
+	top: 3px;
+}
+.prize_item:after{
+	content: '';
+	display: block;
+	background-color: var(--c-prim);
+	position: absolute;
+	left: 1em;
+	top: 1.3em;
+	width: 2px;
+	height: 80%;
+
+}
+.prize_item:last-child:after{
+	background-color: transparent;
+}
+
+.prize_blobs{
+		position: absolute;	
+		top: -50px;
+		// left: 10px;
+		width: 100%;
+		height: 100%;	
+		background-size: 115%;
+		background-repeat: no-repeat;
+		background-position: -30px 0;
+		z-index: 2;
+		background-image: url(../img/prize-blobs.png);
+}
+.prize_balls{
+		position: absolute;	
+		top: 0px;
+		left: 0;
+		width: 100%;
+		height: 100%;	
+		background-size: 100%;
+		background-repeat: no-repeat;
+		z-index: 2;
+		background-image: url(../img/prize-balls.png);
+}
+
+
+.footer{
+	background-image: url(../img/footer.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 145px;
+	width: 100%;
+	background-position-y: 12px;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: -2px;
+}
+.footer-info{
+	background-color: var(--c-bg-2);
+	padding-bottom: 50px;
+}
+.footer-info_item{
+	color: #fff;
+	text-align: center;
+	display: block;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.footer_logo{
+	width: 60px;
+	position: relative;
+}
+.footer-ball{
+	position: absolute;
+	right: 10%;
+	top: 10%;
+	width: 50px;
+}
+
+
+@media (min-width: 600px) {
+	html{
+		background-color: #f8f8f8;
+	}
+	.hero_img{
+		width: 60%;
+	}
+	.hero_blobs{
+		background-position: 0 -670px;
+		background-size: 105%;
+	}
+	.cakes_blobs{
+		background-position-y: -490px;
+	}
+	.prize_blobs{
+		background-position: -20px 0px;
+		background-size: 125%;
+		top: -100px;
+	}
+	.prize_img{
+		width: 40%;
+	}
+	.footer{
+		background-size: 120%;
+		height: 270px;
+	}
+}

@@ -1,0 +1,4 @@
+mixin pic(data)
+	picture(class= data.pictureClass)
+		source(srcset= data.src+".webp 1x,"+data.src+"@2.webp 2x", type="image/webp")
+		img(class= data.imgClass, src= data.src+".png", srcset= data.src+"@2.png 2x", alt= data.alt)
