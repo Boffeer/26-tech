@@ -1,0 +1,129 @@
+header{
+	position: absolute;
+	top: 17px;
+}
+
+.logo{
+	max-width: 250px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding-left: 15px;
+}
+.logo_pic{
+	max-width: 40px;
+	margin-right: 15px;
+}
+.logo_text{
+	font-size: var(--f-regular);
+	color: var(--c-text-w);
+}
+
+.burger{
+	position: fixed;
+	top: 18px;
+	right: 24px;
+	z-index: 50;
+	width: 40px;
+	height: 26px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.burger-line, .burger-line:before, .burger-line:after{
+	display: block;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	background-color: #fff;
+	transition: all 0.3s;
+}
+.burger-line{
+	z-index: 100;
+}
+.burger-line:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 85%;
+}
+.burger-line:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 85%;
+}
+#burger{
+	appearance: none;
+}
+#burger:checked ~ .burger-line{
+	background-color: transparent;
+}
+#burger:checked ~ .burger-line:after{
+	transform: rotate(-45deg);
+	bottom: 12px;
+	background-color: var(--c-bg-d);
+}
+
+#burger:checked ~ .burger-line:before{
+	transform: rotate(45deg);
+	top: 12px;
+	background-color: var(--c-bg-d);
+}
+// #burger:checked + .burger-menu_wrap{
+// 	display: none
+// }
+
+
+.burger-menu_wrap{
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 40;
+	background-color: rgba(0,0,0,0.5);
+	transform: translateX(100%);
+	transition: all 0.3s;
+}
+#burger:checked + .burger-menu_wrap{
+	transform: translateX(0);
+	transition: all 0.3s;
+}
+.burger-menu{
+	background-color: #fff;
+	width: 80%;
+	height: 100vh;
+	padding-left: 42px;
+	padding-right: 42px;
+	padding-bottom: 100px;
+	box-sizing: border-box;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.burger_logo{
+	margin-bottom: 27px;
+	// margin-left: 32%;
+}
+.burger-menu_link{
+	width: 100%;
+	text-decoration: none;
+	font-size: var(--f-bigger);
+	color: var(--c-text);
+	@extend .bold;
+	line-height: 2.5;
+}
+.burger-menu_link:hover{
+	color: var(--c-button-d);
+}
+.burger-menu_button{
+	@extend .e-button;
+	margin-top: auto;
+	width: 100%;
+}
+.burger-menu_button:hover{
+	font-size: var(--f-bigger);
+}
+

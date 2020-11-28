@@ -1,10 +1,19 @@
 :root{
-	--c-prim: #ffd61b;
-	--c-second: #02b202;
-	--c-second--darker: #006600;
+	--c-button-ll: #ffe04c;
+	--c-button-l: #ffd200;
+	--c-button-d: #ffb400;
+	--c-button-dd: #ffb400;
+	
 
 	--c-text: #373737;
+	--c-text-w: #fff;
 
-	--c-bg-1: #ae4dff;
-	--c-bg-2: #7c0ffd;
+	--c-bg-l: #ae4dff;
+	--c-bg-d: #7c0ffd;
+
+	--f-reg: 14px;
+	--f-bigger: 16px;
+	--f-button: 14px;
+	--f-button--active: 18px;
+	--f-title: 22px;
 }

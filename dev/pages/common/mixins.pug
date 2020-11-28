@@ -1,4 +1,35 @@
 mixin pic(data)
 	picture(class= data.pictureClass)
-		source(srcset= data.src+".webp 1x,"+data.src+"@2.webp 2x", type="image/webp")
-		img(class= data.imgClass, src= data.src+".png", srcset= data.src+"@2.png 2x", alt= data.alt)
+		//- source(srcset= data.src+".webp 1x,"+data.src+"@2.webp 2x", type="image/webp")
+		//- img(class= data.imgClass, src= data.src+".png", srcset= data.src+"@2.png 2x", alt= data.alt)
+		img(src= data.src+".png", alt= data.src)
+
+
+//- number, title, short, src, pictureClass, imgClass, alt, bullet, result
+mixin programmItem(data)
+	.programm-item(class="programm-item-"+data.number)
+		h3.programm-item_number= data.number
+		h4.programm-item_title= data.title
+		p.programm-item-short= data.short
+
+		+pic({src: data.src, pictureClass: data.pictureClass, imgClass: data.imgClass, alt: data.title})
+		ul.programm-item-bullets
+			each val in data.bullet
+				li.programm-item_bullet= val
+		.programm-item-result
+			span.programm-item-result_badge Результат
+			each val in data.result
+				p.programm-item-result_text= val
+
+mixin programmItemBonus(data)
+	.programm-item.programm-item--bonus(class="programm-item-"+data.number)
+		h3.programm-item_number.programm-item_number--bonus= data.number
+		h4.programm-item_title.programm-item_title--bonus= data.title
+		+pic({src: data.src, pictureClass: data.pictureClass, imgClass: data.imgClass, alt: data.title})
+		ul.programm-item-bullets.programm-item-bullets--bonus
+			each val in data.bullet
+				li.programm-item_bullet.programm-item_bullet--bonus= val
+		.programm-item-result.programm-item-result--bonus
+			span.programm-item-result_badge.programm-item_badge--bonus Результат
+			each val in data.result
+				p.programm-item-result_text.programm-item_text--bonus= val
