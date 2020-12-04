@@ -38,7 +38,7 @@ const pug2html = () => {
 		.pipe(plumber())
 		.pipe(pugLinter({ reporter: 'default' }))
 		.pipe(pug())
-		.pipe(htmlValidator())
+		// .pipe(htmlValidator())
 		.pipe(gulp.dest('build'))
 		.pipe(sync.stream());
 
@@ -115,31 +115,45 @@ const imgMultiply = () => {
 		.pipe(
 			responsive({
 				'**/*.png':[
-					{ progressive: true, },
-					{ format: 'webp', },
+					{
+						width: '90%',
+						progressive: true, 
+					}
+					,
+					{ 
+						width: '80%',
+						format: 'webp', 
+					},
 					{
 						withoutEnlargement: false,
-						width: '200%',
+						// width: '200%',
 						rename: { suffix: "@2" },
 					},
 					{
 						withoutEnlargement: false,
-						width: '200%',
+						// width: '200%',
+
 						format: 'webp',
 						rename: { suffix: "@2" },
 					},
 				],				
 				'**/*.jpg':[
-					{ progressive: true, },
-					{ format: 'webp', },
+					{ 
+						width: '90%',
+						progressive: true, 
+					},
+					{ 
+						width: '80%',
+						format: 'webp', 
+					},
 					{
 						withoutEnlargement: false,
-						width: '200%',
+						// width: '200%',
 						rename: { suffix: "@2" },
 					},
 					{
 						withoutEnlargement: false,
-						width: '200%',
+						// width: '200%',
 						format: 'webp',
 						rename: { suffix: "@2" },
 					},
@@ -237,7 +251,7 @@ exports.default = gulp.series(
 		styles,
 		scripts,
 		copy,
-		imgDev
+		// imgDev
 	),
 	// 'paths',
 	gulp.parallel(

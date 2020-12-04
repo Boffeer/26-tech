@@ -10,31 +10,50 @@ block content
 				| и начни зарабатывать 
 				span.text-bold от 30 000 рублей
 				|  в месяц!
+			
+
 			.hero-pic
 				+pic({src: "img/1-hero/hero", pictureClass: 'hero_pic'})
 				.hero-badge Екатерина Мулюкова
-			button.e-button.hero_cta Принять участие
+					.hero-badge_descr
+						p.hero-badge_descr-item - Основательница кондитерской онлайн-школы "Katy school"
+						p.hero-badge_descr-item - Обучила более 3000 человек на платных и 20 000 на бесплатных программах
+						p.hero-badge_descr-item - В 20 лет открыла кондитерский цех
+			//- a(href="#pricing").e-button.hero_cta Принять участие
+			+btn({
+				href: "#pricing",
+				classList: "e-button hero_cta",
+				ymName: "'click-hero'",
+				ymTag: "'70016527'",
+				text: 'Принять участие'
+			})
+
+			
 
 
-		section.for-you
+
+
+
+
+		section.for-you#for-you
 			h2.for-you_title Этот курс для тебя, если:
 
 			.for-you-item
 				.for-you-item-title.for-you-item-title--base
-					h3.for-you-item-title_text.extra-bold  Ты новичок
+					h3.for-you-item-title_text.extra-bold.for-you-item-title_text--noob  Ты новичок
 					+pic({src: "img/2-for-you/1", pictureClass: 'for-you-item-title_pic'})
 				p.for-you-item_descr Если ты только 
 					span.text-bold начинаешь свой путь в кондитерском деле
-					span и тебе непонятно с чего начать, где брать информацию и где обучаться
+					span  и тебе непонятно с чего начать, где брать информацию и где обучаться
 				.for-you-item-result
 					span.for-you-item-result_badge Результат
 					p.for-you-item-result_text Получи пошаговую методику, по которой безболезненно 
 						span.text-bold пройдёшь «за ручку» под наставничеством Екатерины
-						span и кураторов, сделаешь первые торты с современным декором и вкусными начинками
+						span  и кураторов, сделаешь первые торты с современным декором и вкусными начинками
 
 			.for-you-item.for-you-item--family
-				.for-you-item-title
-					h3.for-you-item-title_text.extra-bold  Ты готовишь для семьи
+				.for-you-item-title.for-you-item-title--family
+					h3.for-you-item-title_text.for-you-item-title_text--family.extra-bold  Ты готовишь для семьи
 					+pic({src: "img/2-for-you/2",pictureClass: 'for-you-item-title_pic for-you-item-title_pic--family'})
 				p.for-you-item_descr.for-you-item_descr--family Если ты готовишь только для семьи и  
 					span.text-bold хочешь порадовать их новыми и вкусными начинками 
@@ -46,9 +65,9 @@ block content
 						span на любой праздник: дни рождения близких, семейные праздники, детская тематика
 
 			.for-you-item.for-you-item--baker
-				.for-you-item-title
-					h3.for-you-item-title_text.extra-bold  Ты опытный кондитер
-					+pic({src: "img/2-for-you/3", pictureClass: 'for-you-item-title_pic'})
+				.for-you-item-title.for-you-item-title--baker
+					h3.for-you-item-title_text.for-you-item-title_text--backer.extra-bold  Ты опытный кондитер
+					+pic({src: "img/2-for-you/3", pictureClass: 'for-you-item-title_pic for-you-item-title_pic--backer'})
 				p.for-you-item_descr.for-you-item_descr--baker Если ты уже опытный кондитер, который хочет 
 					span.text-bold увеличить свои заказы
 					span или 
@@ -58,8 +77,15 @@ block content
 					p.for-you-item-result_text Расширишь свою ассортиментную линейку, 
 						span.text-bold узнаешь как продвигать себя в сети и искать клиентов
 						span , а также какие начинки им предлагать
+			+btn({
+				href: "#pricing",
+				classList: "e-button for-you_cta",
+				ymName: "'click-for-you'",
+				ymTag: "'70016527'",
+				text: 'Принять участие'
+			})
+			//- button.e-button.for-you_cta Принять участие
 
-			button.e-button.for-you_cta Принять участие
 
 
 
@@ -68,8 +94,7 @@ block content
 
 
 
-
-		section.programm
+		section.programm#programm
 			h2.programm_title Программа курса:
 
 			.programm-item.programm-item-01
@@ -81,7 +106,7 @@ block content
 					li.programm-item_bullet Как выпекать бисквиты без бугорков и трещин
 					li.programm-item_bullet Секреты температурного режима
 					li.programm-item_bullet Как правильно собрать и выстоять торт
-				h4.programm-item_title  Блок № 2 «Подготовка к декору» — Теория
+				h4.programm-item_title  Блок № 2 «Подготовка к&nbsp;декору» — Теория
 				+pic({src: "img/3-programm/02", pictureClass: "programm_pic"})
 				ul.programm-item-bullets
 					li.programm-item_bullet Какой минимальный инвентарь необходим для декора
@@ -106,13 +131,13 @@ block content
 				src: "img/3-programm/2",
 				pictureClass: "programm_pic",
 				imgClass: "",
-				bullet: ["На каком этапе правильно наносить цвета", 'Как сделать нежную цветовую гамму', 'Как сделать глазурь нужной консистенции', 'Как наносить, чтобы она стекала красиво по торту', 'Как наносить, чтобы она стекала красиво по торту'],
+				bullet: ["На каком этапе правильно наносить цвета", 'Как сделать нежную цветовую гамму', 'Как сделать глазурь нужной консистенции', 'Как наносить, чтобы она стекала красиво по торту',],
 				result: ['Ты научишься выравнивать торт в двухцветной палитре. Украсишь шоколадными подтёками, которые будут аккуратно стекать по твоему торту. А ягодный декор сделает твою композицию завершённой!']
 			})
 			+programmItem({
 				number: "03",
-				title: "«Кремовый декор + Торт Единорог»",
-				short: "Начинка: Ванильный Шоколадный бисквит + крем-чиз",
+				title: "«Кремовый декор +\u00A0Торт Единорог»",
+				short: "Начинка: Ванильный Шоколадный бисквит +\u00A0крем-чиз",
 				src: "img/3-programm/3",
 				pictureClass: "programm_pic programm_pic-3",
 				imgClass: "",
@@ -127,12 +152,12 @@ block content
 				pictureClass: "programm_pic programm_pic-4",
 				imgClass: "",
 				bullet: ['Как растопить изомальт и придать круглую форму леденцам','Как правильно окрашивать и хранить готовые изделия','Как растопить шоколад без темперирования и градусника'],
-				result: ["Ты освоишь современные техники декора, которые можно комбинировать на различных тортах. Натуральные леденцы на палочке украсят любой детский торт. А шоколадные сферы будут вызывать восторг близких!"]
+				result: ["Ты освоишь современные техники\u00A0декора, которые можно комбинировать на различных тортах. Натуральные леденцы на\u00A0палочке украсят любой детский торт. А шоколадные сферы будут вызывать восторг близких!"]
 			})
 			+programmItem({
 				number: "05",
 				title: "«Меренговый декор + Белая глазурь»",
-				short: "Начинка: Песочный с вишней и сливочно-сметанным кремом",
+				short: "Начинка: Песочный с вишней и\u00A0сливочно-сметанным кремом",
 				src: "img/3-programm/5",
 				pictureClass: "programm_pic",
 				imgClass: "",
@@ -147,29 +172,39 @@ block content
 				pictureClass: "programm_pic programm_pic-6",
 				imgClass: "",
 				bullet: ['Как правильно составлять композиции на любую тематику','Как правильно окрашивать и хранить готовые изделия','Как растопить шоколад без темперирования и градусника','Как сделать красивую линию разлома без кондитерского мешка'],
-				result: [' Ты научишься составлять композиционный декор на любую тематику. С помощью Линии разлома твой торт будет смотреться эффектно, вызывая восторг у близких!']
+				result: [' Ты научишься составлять композиционный декор на любую\u00A0тематику. С помощью Линии разлома твой торт будет смотреться эффектно, вызывая восторг у близких!']
 			})
 			+programmItem({
 				number: "07",
 				title: "«Ваза из изомальта + Сахарный лист»",
-				short: " Начинка: Многослойный с грецкими орехами и кремом брюле",
+				short: " Начинка: Многослойный с грецкими орехами и кремом\u00A0брюле",
 				src: "img/3-programm/7",
 				pictureClass: "programm_pic programm_pic-7",
 				imgClass: "",
 				bullet: ['Техника безопасности при работе с изомальтом','Как приготовить вазу с красивыми очертаниями, чтобы она сохранила форму','Как сделать блестящий декор из сахарного листа, чтобы он не сломался'],
-				result: ['С помощью обычного сахара ты сможешь изящно украсить торт. А мерцающая ваза будет красиво отблёскивать на столе, создавая праздничную атмосферу!']
+				result: ['С помощью обычного сахара ты сможешь изящно украсить торт. А\u00A0мерцающая ваза будет красиво отблёскивать на столе, создавая праздничную атмосферу!']
 			})
-			button.e-button.programm_cta Принять участие
 			+programmItem({
 				number: "08",
-				title: "«Декор с элементами из мастики +Шоколадные перья»",
-				short: " Начинка: Ванильно Шифоновый бисквит с черничным конфи",
+				title: "«Декор с элементами из мастики +Шоколадные\u00A0перья»",
+				short: "Начинка: Ванильно Шифоновый бисквит с черничным конфи",
 				src: "img/3-programm/8",
 				pictureClass: "programm_pic programm_pic-8",
 				imgClass: "",
 				bullet: ['Как приготовить съедобные фигурки из мастики','Как делать красивые надписи на торт','Как приготовить шоколадные перья, которые держат форму'],
-				result: [' Ты научишься готовить красивый декор, используя элементы декора из мастики. А шоколадные перья придадут изящность твоему торту и порадуют самого прихотливого гостя!']
+				result: [' Ты научишься готовить красивый\u00A0декор, используя элементы декора из мастики. А шоколадные\u00A0перья придадут изящность твоему торту и порадуют самого прихотливого\u00A0гостя!']
 			})
+
+
+			+btn({
+				href: "#pricing",
+				classList: "e-button programm_cta",
+				ymName: "'click-program-middle'",
+				ymTag: "'70016527'",
+				text: 'Принять участие'
+			})
+
+			//- button.e-button.programm_cta Принять участие
 			+programmItem({
 				number: "09",
 				title: "«Мягкие кристаллы жеода»",
@@ -188,7 +223,7 @@ block content
 				pictureClass: "programm_pic programm_pic-10",
 				imgClass: "",
 				bullet: ['Как приготовить зеркальную глазурь без блендера','Как использовать глазурь повторно, при правильном хранении','Как определить рабочую температуру и темперировать шоколад','Какие элементы декора можно приготовить из шоколада'],
-				result: ['Ты перестанешь бояться муссовых тортов и перейдёшь с ними на «ты». Твой стол украсит эффектный  торт, покрытый зеркальной глазурью, с элементами шоколадного декора!']
+				result: ['Ты перестанешь бояться муссовых\u00A0тортов и перейдёшь с ними на «ты». Твой стол украсит\u00A0эффектный  торт, покрытый зеркальной глазурью, с элементами шоколадного декора!']
 			})
 			+programmItem({
 				number: "11",
@@ -198,7 +233,7 @@ block content
 				pictureClass: "programm_pic programm_pic-11",
 				imgClass: "",
 				bullet: ['Какими красителями окрашивать крем','Как приготовить плотный крем, который держит форму','Какие насадки использовать для цветов'],
-				result: ['Ты научишься отсаживать шикарные цветы, которые будут выглядеть, как живые на твоём праздничном торте!']
+				result: ['Ты научишься отсаживать шикарные цветы, которые будут выглядеть, как живые на\u00A0твоём праздничном торте!']
 			})
 			+programmItem({
 				number: "12",
@@ -208,16 +243,22 @@ block content
 				pictureClass: "programm_pic",
 				imgClass: "",
 				bullet: ['Как сделать нежную цветовую гамму для акварели','Какие цветы можно использовать на торты и десерты','Как гармонично располагать цветы, и с каким декором они сочетаются','3 техники изолирования цветов от торта'],
-				result: ['Ты соберёшь трёхъярусный торт и освоишь нежную акварельную технику и работу с живыми цветами. Этот многоярусный торт удивит всех твоих гостей своим шикарным видом!']
+				result: ['Ты соберёшь трёхъярусный торт и освоишь нежную акварельную технику и работу\u00A0с живыми цветами. Этот многоярусный торт удивит всех твоих гостей своим шикарным видом!']
 			})
+		.programm-bonuses
 			+programmItemBonus({
 				number: "13",
 				title: "Формирование образа в социальной сети",
 				src: "img/3-programm/13",
 				pictureClass: "programm-pic programm-pic-13",
 				imgClass: "",
-				bullet: ['Оформление страницы','Написание и публикация постов','Проявление активности в сети'],
-				result: ['Твоя страница красиво и правильно оформлена, люди начинают проявлять к вам интерес как к личности, появляются первые обращения, заказы и ПРОДАЖИ!']
+				bullet: ['Убираем все лишнее со страницы',
+				'Оформление и упаковка аккаунта',
+				'Находим свою уникальность',
+				'Готовим контент-план выхода постов',
+				'Пишем и публикуем посты',
+				'Внедряем ежедневный чек-лист'],
+				result: ['Твоя страница красиво и правильно оформлена. Ты яркий и интересный кондитер. К тебе проявляют интерес. Сформулирован контент-план на месяц!']
 			})
 
 			+programmItemBonus({
@@ -226,20 +267,74 @@ block content
 				src: "img/3-programm/14",
 				pictureClass: "programm-pic programm-pic-14",
 				imgClass: "",
-				bullet: ['Бесплатные способы продвижения','Информация как правильно общаться с заказчиками, продавать свои услуги','Получение дальнейшего плана развития','Финальное наставление от Екатерины'],
-				result: ['У тебя есть пошаговый план развития на месяцы вперёд, тебе ясно, что делать и как продвигаться дальше!']
+				bullet: ['Вкусные фотографии, которые продают',
+				'Что пишем на личной странице (отличие от группы)',
+				'Пошаговая акция на 4 праздника',
+				'Общение с клиентами и скрипты продаж',
+				'Стратегия продвижения личного бренда',
+				'Яркие и продающие сториз как сериал',
+				],
+				result: ['Есть понимание - как привлекать клиентов на торты\u00A0бесплатно с помощью ежедневного чек-листа! И пошаговых акций, используя\u00A0в\u00A0приготовлении вкусные начинки, которые готовятся быстро!']
 			})
-			button.e-button.programm_cta.programm_cta--bottom
+			+programmItemBonus({
+				number: "15",
+				title: 'Группа Вконтакте',
+				src: "img/3-programm/15",
+				pictureClass: "programm-pic programm-pic-15",
+				imgClass: "",
+				bullet: ['Как создать и оформить сообщество',
+				'Бесплатное продвижение группы ВК',
+				'Как продвигать себя и никому не платить',
+				'Как купить рекламу в больших пабликах',
+				'Проведение розыгрыша в группе',
+				'Бонус - Рассылка сообщений в сенлер',
+				],
+				result: ['Упакованная и готовая к продвижению группа. Готов второй источник привлечения\u00A0клиентов через\u00A0современные бизнес\u2011инструменты без технических сложностей!']
+			})
+			+programmItemBonus({
+				number: "16",
+				title: 'Группа Вконтакте',
+				src: "img/3-programm/16",
+				pictureClass: "programm-pic programm-pic-16",
+				imgClass: "",
+				bullet: ['Поиск и работа с аудиториями',
+				'Как продвинуть свой пост и показать его клиентам',
+				'Как получать клики на свои товары',
+				'Как получить подписчиков в рассылку и группу',],
+				result: ['Ты узнаешь, что такое таргет, как пополнить бюджет, виды объявлений, как запустить объявление. И сможешь быстро получать клиентов с помощью платной рекламы']
+			})
 
 
 
 
 
 
+		section.testimonial#testimonials
+			+btn({
+				href: "#pricing",
+				classList: "e-button programm_cta prog_cta--bottom",
+				ymName: "'click-program-end'",
+				ymTag: "'70016527'",
+				text: 'Принять участие'
+			})
+			//- button.e-button.programm_cta.prog_cta--bottom Принять участие
+			h2.testimonial_title Отзывы:
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						img(src="img/testimonial-1.jpg" alt="testimonials").testimonials-sldier_item
+					.swiper-slide
+						img(src="img/testimonial-2.jpg" alt="testimonials").testimonials-sldier_item
+					.swiper-slide
+						img(src="img/testimonial-3.jpg" alt="testimonials").testimonials-sldier_item
+					.swiper-slide
+						img(src="img/testimonial-4.jpg" alt="testimonials").testimonials-sldier_item
+					.swiper-slide
+						img(src="img/testimonial-5.jpg" alt="testimonials").testimonials-sldier_item
+				.swiper-pagination
+				.swiper-button-prev
+				.swiper-button-next
 
-
-		section.testimonial
-			h2.section_title Отзывы:
 
 
 
@@ -249,90 +344,188 @@ block content
 
 
 		section.pricing#pricing
-			h2.section_title Цены курса:
+			h2.section_title.section_title--pricing Цены курса:
 			.pricing-item
 				.pricing-item-header.pricing-item-header--noob
-					+pic({src: 'img/4-pricing/noob'})
+					+pic({src: 'img/vench2', pictureClass: "pricing_pic"})
 					h3.pricing-item_title Начинающий
 				ul.pricing-item-bullets
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/1'})
+						+pic({src: 'img/4-pricing/1', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 1
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/2'})
+						+pic({src: 'img/4-pricing/2', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 2
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/3'})
+						+pic({src: 'img/4-pricing/3', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 3
 
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/4'})
+						+pic({src: 'img/4-pricing/4', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 4
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/5'})
+						+pic({src: 'img/4-pricing/5', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 5
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/6'})
+						+pic({src: 'img/4-pricing/6', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 6
-					
-				+pic({src: 'img/4-pricing/gift'})
+				ul.pricing-item-features
+					li.pricing-item-featrues_item 
+						span.bullet • 
+						span Доступ в закрытый чат с участниками и кураторами
+					li.pricing-item-featrues_item 
+						span.bullet • 
+						span Поддержка и помощь кураторов на протяжении всего курса 
+					li.pricing-item-featrues_item 
+						span.bullet • 
+						span Навсегда доступ ко всем материалам курса
+
+					li.pricing-item-featrues_item 
+						span.bullet • 
+						span Удобные техкарты к каждому модулю
+				+pic({src: 'img/prize', pictureClass: 'pricing_gift'})
 				p.pricing-item_gift-text Рецепт Королевского торта и один мастер класс в подарок
 					span.pricing-item_gift-text--caption (при пролной оплате курса)
-				p.pricing-item-price_new 3 990₽
-				p.pricing-item-price_old 8 000₽
-				button.e-button.pricing-item_cta.pricing-item_cta--noob Записаться
+				p.pricing-item-price_new 3 990 ₽
+				p.pricing-item-price_old 8 000 ₽
+				//- button.e-button.pricing-item_cta.pricing-item_cta--noob Оплатить полностью
+				//- +btn({
+				//- 	href: "https://katyschool.ru/starting",
+				//- 	classList: "e-button pricing-item_cta pricing-item_cta--noob",
+				//- 	ymName: "'click-begginer-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Оплатить полностью'
+				//- })
+				+btn({
+					href: "https://katyschool.ru/starting",
+					classList: "e-button pricing-item_cta pricing-item_cta--noob",
+					text: 'Оплатить полностью',
+					clickFunc: "ym("+ymTag+",'reachGoal','all-full-payment'); ym("+ymTag+",'reachGoal','all-book-and-order');"
+				})
+				+btn({
+					href: "https://katyschool.ru/starting_prepayment",
+					classList: "pricing-item_book pricing-item_book--noob",
+					ymName: "'click-book-begginer-pack'",
+					ymTag: "'70016527'",
+					text: 'Забронировать за 990₽'
+				})
+				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
 
 
 			.pricing-item
-				.pricing-item-header
-				.pricing-item-header--base
-					+pic({src: 'img/4-pricing/base'})
-					h3.pricing-item_title Базовый
-				.pricing-item_text Все, что входит в начинающий
+				.pricing-item-header.pricing-item-header--base
+					+pic({src: 'img/4-pricing/venchik', pictureClass: 'pricing-pic--base'})
+					h3.pricing-item_title Профессионал
+				.pricing-item_prev Все, что входит в начинающий
 				ul.pricing-item-bullets
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/7'})
+						+pic({src: 'img/4-pricing/7', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 7
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/8'})
+						+pic({src: 'img/4-pricing/8', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 8
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/9'})
+						+pic({src: 'img/4-pricing/9', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 9
 
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/10'})
+						+pic({src: 'img/4-pricing/10', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 10
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/11'})
+						+pic({src: 'img/4-pricing/11', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 11
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/12'})
+						+pic({src: 'img/4-pricing/12', pictureClass: 'pricing-item_pic'})
 						p.pricing-item_text Модуль 12
 					
-				+pic({src: 'img/4-pricing/gift'})
-				p.pricing-item_gift-text Курс 5 лучших начинок 2.0 в подарок
+				+pic({src: 'img/prize', pictureClass: 'pricing_gift pricing-gift--base'})
+				p.pricing-item_gift-text Курс 5 лучших начинок 2.0<br> в подарок
 					span.pricing-item_gift-text--caption (при пролной оплате курса)
 				p.pricing-item-price_new 7 990₽
 				p.pricing-item-price_old 16 000₽
-				button.e-button.pricing-item_cta.pricing-item_cta--base Записаться
+				//- button.e-button.pricing-item_cta.pricing-item_cta--base Оплатить полностью
+				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
+				+btn({
+					href: "https://katyschool.ru/professional",
+					classList: "e-button pricing-item_cta pricing-item_cta--base",
+					ymName: "'click-pro-pack'",
+					ymTag: "'70016527'",
+					text: 'Оплатить полностью',
+				})
+				+btn({
+					href: "https://katyschool.ru/professional_prepayment",
+					classList: "pricing-item_book pricing-item_book--noob",
+					ymName: "'click-book-pro-pack'",
+					ymTag: "'70016527'",
+					text: 'Забронировать за 990₽'
+				})
+
+
+			.pricing-item.pricing-item--pro
+				.pricing-item-header.pricing-item-header--pro
+					+pic({src: 'img/4-pricing/2-mixer', pictureClass: 'pricing-pic--pro'})
+					h3.pricing-item_title Бизнес
+				.pricing-item_prev Все, что входит в профессионал
+				ul.pricing-item-bullets.pricing-bullets--big
+					li.pricing-item_bullet
+						+pic({src: 'img/4-pricing/money'})
+						p.pricing-item_text 4 модуля бизнес пакета
+					li.pricing-item_text--access Доступ в закрытый чат выпускник курса 26&nbsp;техник декора
+
+				+pic({src: 'img/prize', pictureClass: 'pricing_gift'})
+
+				p.pricing-item_gift-text Курс евро-торты <br>в подарок
+					span.pricing-item_gift-text--caption (при пролной оплате курса)
+				p.pricing-item-price_new 13 990 ₽
+				p.pricing-item-price_old 32 000 ₽
+				+btn({
+					href: "https://katyschool.ru/business",
+					classList: "e-button pricing-item_cta pricing-item_cta--pro",
+					ymName: "'click-business-pack'",
+					ymTag: "'70016527'",
+					text: 'Оплатить полностью'
+				})
+				+btn({
+					href: "https://katyschool.ru/business_prepayment",
+					classList: "pricing-item_book pricing-item_book--noob",
+					ymName: "'click-book-business-pack'",
+					ymTag: "'70016527'",
+					text: 'Забронировать за 990₽'
+				})
+				//- button.e-button.pricing-item_cta.pricing-item_cta--pro Оплатить полностью
+				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
 
 
 			.pricing-item
-				.pricing-item-header.pricing-item-header--pro
-					+pic({src: 'img/4-pricing/pro'})
-					h3.pricing-item_title Базовый
-				.pricing-item_text Все, что входит в начинающий
-				ul.pricing-item-bullets
+				.pricing-item-header.pricing-item-header--vip
+					+pic({src: 'img/4-pricing/3-pro', pictureClass: 'pricing-pic--vip'})
+					h3.pricing-item_title VIP
+				.pricing-item_prev Все, что входит в бизнес
+				ul.pricing-item-bullets.pricing-bullets--big.pricing-bullets--vip
+					li.pricing-item_bullet.pricing-item_bullet--plus
+						+pic({src: 'img/4-pricing/logo', pictureClass: 'pricing-item-pic--vip'})
+						p.pricing-item_text Навсегда доступ ко всем остальным курсам школы «Katy&nbsp;school». (Общая цена курсов отдельно 36000)
 					li.pricing-item_bullet
-						+pic({src: 'img/4-pricing/money'})
-						p.pricing-item_text 2 модуля бизнес пакета
-				+pic({src: 'img/4-pricing/gift'})
-				p.pricing-item_gift-text Курс 5 лучших начинок 2.0 в подарок
-					span.pricing-item_gift-text--caption (при пролной оплате курса)
-				p.pricing-item-price_new 13 990₽
-				p.pricing-item-price_old 32 000₽
-				button.e-button.pricing-item_cta.pricing-item_cta--pro Записаться
+						+pic({src: 'img/4-pricing/phone', pictureClass: 'pricing-item-pic--vip'})
+						p.pricing-item_text Неограниченная поддержка Екатерины + Личный коучинг&nbsp;с&nbsp;Екатериной (личные созвоны по телефону и помощь)
+				p.pricing-item-price_new 29 990 ₽
+				p.pricing-item-price_old 35 000 ₽
+				+btn({
+					href: "https://katyschool.ru/vip",
+					classList: "e-button pricing-item_cta pricing-item_cta--pro",
+					ymName: "'click-vip-pack'",
+					ymTag: "'70016527'",
+					text: 'Оплатить полностью'
+				})
+				+btn({
+					href: "https://katyschool.ru/vip_prepayment",
+					classList: "pricing-item_book pricing-item_book--noob",
+					ymName: "'click-book-vip-pack'",
+					ymTag: "'70016527'",
+					text: 'Забронировать за 990₽'
+				})
+				//- button.e-button.pricing-item_cta.pricing-item_cta--pro Оплатить полностью
+				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
 
 
 
@@ -343,14 +536,23 @@ block content
 
 
 
-		section.my-idea
-			h2.section_title Моя большая идея
+
+		section.my-idea#idea
+			h2.seciton_title-idea Моя большая идея
 
 			.my-idea-text
-				p.text-bold 1 раз расширив границы и рискнув, вы уже не сможете вернуться н
-				p.my-idea-text_regular Вы можете годами откладывать этот рывок, но это не принесёт вам
-				p.text-bold Что выберешь ты: оставить все как есть или выйти на новый урове
-				button.e-button.my-idea_cta
+				p.text-bold 1 раз расширив границы и рискнув, вы уже не сможете вернуться назад
+				p.my-idea-text_regular Вы можете годами откладывать этот рывок, но это не принесёт вам никакого удовольствия и успеха. Но если рискнуть - может поменять все. Новые знания, новые вкусные торты, новые техники декора, новый круг общения, стабильный заработок на любимом деле
+				p.my-idea-text_regular 1 решение - меняет всю жизнь. Я проверила, а вместе со мной более тысячи учениц
+				p.text-bold Что выберешь ты: оставить все как есть или выйти на новый уровень?
+				//- button.e-button.my-idea_cta Принять участие
+				+btn({
+					href: "#pricing",
+					classList: "e-button my-idea_cta",
+					ymName: "'click-idea'",
+					ymTag: "'70016527'",
+					text: 'Принять участие'
+				})
 
 
 
@@ -359,8 +561,8 @@ block content
 
 
 
-		section.unique
-			h2.section_title В чем уникальность  курса?
+		section.unique#unique
+			h2.section_title.section_title--unique В чем уникальность  курса?
 			ul.unique-bullets
 				li.unique-bullet
 					+pic({src: 'img/5-unique/1'})
@@ -369,7 +571,7 @@ block content
 						span.text-bold--colored кухня станет местом, где рождаются кондитерские шедевры
 						| . Это хобби, которое будет приносить тебе удовольствие!
 				li.unique-bullet
-					+pic({src: 'img/5-unique/2'})
+					+pic({src: 'img/5-unique/2.1'})
 					h3.unique-bullet_title Это красиво
 					p.unique-item_text Торт ручной работы всегда будет главным героем на празднике! Используя мою методику, ты сможешь 
 						span.text-bold--colored воплотить любую идею в реальность! 
@@ -380,51 +582,96 @@ block content
 					p.unique-item_text Моя технология уникальна тем, что любой декор ты сможешь  
 						span.text-bold--colored приготовить всего за 30 минут
 						| , без использования дорогого инвентаря и сложных ингредиентов!
-
-
-
-
-			section.faq
-				h2.section_title Частые вопросы
-				.faq-list
-					.faq-item
-						input(type="checkbox" name="faq")#faq-1
-						label.faq_question(for="faq-1") Подойдет ли мне курс, если я совсем новичок?
-						.faq_answer 
-							p.faq_answer-text Он не просто вам подойдет, он вам необходим. Либо вы месяцами будете искать себя и ходить в мыслях, либо здесь и сейчас сделаете первые шаги и получите первые результаты. Я даю гарантию, что любой новичок сможет сделать торт с 1 раза. Именно в этом моя уникальность
-
-					.faq-item
-						input(type="checkbox" name="faq")#faq-2
-						label.faq_question(for="faq-2") Во сколько будут проходить уроки?
-						.faq_answer 
-							p.faq_answer-text Все материалы курса в записи. Это пошаговые видео-материалы, которые подробно описаны текстом. Это позволяет заниматься выполнением домашних заданий в любое удобное время суток
-					.faq-item
-						input(type="checkbox" name="faq")#faq-3
-						label.faq_question(for="faq-3") Как долго длится курс?
-						.faq_answer 
-							p.faq_answer-text Длительность курса зависит от пакета.
-							.faq_answer-bullet
-								span.text-bold Начинающий
-								| — 4 недели
-							.faq_answer-bullet
-								span.text-bold Базовый
-								| — 8 недель
-							.faq_answer-bullet
-								span.text-bold Базовый
-								| — 12 недель
-
-							| Все это время вы будете получать знания, мотивацию и действовать. Всё это под присмотром команды кураторов и Екатерины
-
-					.faq-item
-						input(type="checkbox" name="faq")#faq-4
-						label.faq_question(for="faq-4") Как долго останется доступ к материалам?
-						.faq_answer 
-							p.faq_answer-text Доступ к курсу останется навсегда. Вы легко сможете вернуться и пересмотреть нужные блоки, чтобы освежить что-то в памяти.
+			//- button.e-button.unique_cta Принять участие
+			+btn({
+				href: "#pricing",
+				classList: "e-button unique_cta",
+				ymName: "'click-unique'",
+				ymTag: "'70016527'",
+				text: 'Принять участие'
+			})
 
 
 
 
 
+		section.faq#faq
+			h2.section_title.section_title--faq Частые вопросы
+			.faq-list
+				.faq-item
+					input(type="checkbox" name="faq")#faq-1.faq-input
+					label.faq_question(for="faq-1") Подойдет ли мне курс, если я совсем новичок?
+					.faq_answer 
+						p.faq_answer-text Он не просто вам подойдет, он вам необходим. Либо вы месяцами будете искать себя и ходить в мыслях, либо здесь и сейчас сделаете первые шаги и получите первые результаты. Я даю гарантию, что любой новичок сможет сделать торт с 1 раза. Именно в этом моя уникальность
+
+				.faq-item
+					input(type="checkbox" name="faq")#faq-2.faq-input
+					label.faq_question(for="faq-2") Во сколько будут проходить уроки?
+					.faq_answer 
+						p.faq_answer-text Все материалы курса в записи. Это пошаговые видеоматериалы, которые подробно описаны текстом. Это позволяет заниматься выполнением домашних заданий в любое удобное время суток
+				.faq-item
+					input(type="checkbox" name="faq")#faq-3.faq-input
+					label.faq_question.faq_question--one-line(for="faq-3") Как долго длится курс?
+					.faq_answer 
+						p.faq_answer-text Длительность курса зависит от пакета.
+						.faq_answer-bullet
+							span.text-bold.tex-bold--faq Начинающий
+							| — 4 недели
+						.faq_answer-bullet
+							span.text-bold.tex-bold--faq Базовый
+							| — 8 недель
+						.faq_answer-bullet.faq_answer-bullet--last
+							span.text-bold.tex-bold--faq Базовый
+							| — 12 недель
+
+						| Все это время вы будете получать знания, мотивацию и действовать. Всё это под присмотром команды кураторов и Екатерины
+
+				.faq-item
+					input(type="checkbox" name="faq")#faq-4.faq-input
+					label.faq_question(for="faq-4") Как долго останется доступ к материалам?
+					.faq_answer 
+						p.faq_answer-text Доступ к курсу останется навсегда. Вы легко сможете вернуться и пересмотреть нужные блоки, чтобы освежить что-то в памяти
+				.faq-item
+					input(type="checkbox" name="faq")#faq-5.faq-input
+					label.faq_question(for="faq-5") Не могу оплатить полностью, что&nbsp;делать?
+					.faq_answer 
+						p.faq_answer-text Вы можете забронировать условия за 990 рублей, а остаток внести в рассрочку. После оплаты брони с вами свяжется помощник и обсудит удобные условия погашения остатка. Мы предоставляем рассрочку от банка и школы
 
 
 
+
+
+
+		section.doubt-block#doubt
+			.doubt
+				h2.section_title.section_title--doubt Хотите участвовать, но сомневаетесь?
+				p.doubt_text Напишите на официальный аккаунт школы или оставьте свой номер для обратной связи — мы ответим на все вопросы
+				+btn({
+					href: "https://ndlr.cc/huGgl6b5x",
+					classList: "e-button doubt_cta",
+					ymName: "'click-message'",
+					ymTag: "'70016527'",
+					text: 'Написать в группу'
+				})
+					//- href: "https://ndlr.cc/huGgl6b7E",
+				+btn({
+					href: "vk.me/ekaterinakonditer",
+					classList: "doubt_book",
+					ymName: "'click-callback'",
+					ymTag: "'70016527'",
+					text: 'Оставить контакты',
+					vk: true,
+				})
+				
+				//- button.e-button.doubt_cta Написать в группу
+				//- button.doubt_book Оставить контакты
+				+pic({src: 'img/ending'})
+		.end
+			//- button.e-button.end_cta Принять участие
+			+btn({
+				href: "#pricing",
+				classList: "e-button end_cta",
+				ymName: "'click-end'",
+				ymTag: "'70016527'",
+				text: 'Принять участие'
+			})

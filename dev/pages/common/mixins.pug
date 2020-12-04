@@ -1,8 +1,52 @@
+
+
+
+
 mixin pic(data)
 	picture(class= data.pictureClass)
 		//- source(srcset= data.src+".webp 1x,"+data.src+"@2.webp 2x", type="image/webp")
-		//- img(class= data.imgClass, src= data.src+".png", srcset= data.src+"@2.png 2x", alt= data.alt)
-		img(src= data.src+".png", alt= data.src)
+		source(srcset= data.src+".webp", type="image/webp")
+		img(class= data.imgClass, src= data.src+".png" alt= data.alt)
+		//- img(src= data.src+".png", alt= data.src)
+
+
+mixin btn(data)
+	- var ymTag = "'70016527'"
+	if(data.ymName)
+		if (data.vk === true)
+			a(href="https://"+data.href+"" class="button-desktop autoink "+data.classList+"" onclick="ym("+ymTag+",'reachGoal',"+data.ymName+")")
+				span= data.text
+				if ((data.text != 'Забронировать за 990₽') && (data.text != 'Оставить контакты'))
+					span.ink.animate
+			a(href="vk://"+data.href+"" class="button-mobile autoink "+data.classList+"" onclick="ym("+ymTag+",'reachGoal',"+data.ymName+")")
+				span= data.text
+				if ((data.text != 'Забронировать за 990₽') && (data.text != 'Оставить контакты'))
+					span.ink.animate
+		else
+			a(href=""+data.href+"" class="autoink "+data.classList+"" onclick="ym("+ymTag+",'reachGoal',"+data.ymName+")")
+				span= data.text
+				if ((data.text != 'Забронировать за 990₽') && (data.text != 'Оставить контакты'))
+					span.ink.animate
+		// button(class=""+data.classList+"" onclick="ym("+ymTag+",'reachGoal',"+data.ymName+"); document.location.assign('"+data.href+"')")= data.text
+		// a(href=""+data.href+"" class=""+data.classList+"" onclick="ym("+ymTag+",'reachGoal',"+data.ymName+")")= data.text
+	if(data.clickFunc)
+		if (data.vk === true)
+			a(href="https://"+data.href+"" class="button-desktop autoink "+data.classList+"" onclick=""+data.clickFunc+"")
+				span= data.text
+				if ((data.text != 'Забронировать за 990₽') && (data.text != 'Оставить контакты'))
+					span.ink.animate
+			a(href="vk://"+data.href+"" class="button-mobile autoink "+data.classList+"" onclick=""+data.clickFunc+"")
+				span= data.text
+				if ((data.text != 'Забронировать за 990₽') && (data.text != 'Оставить контакты'))
+					span.ink.animate
+		else
+			a(href=""+data.href+"" class="autoink "+data.classList+"" onclick=""+data.clickFunc+"")
+				span= data.text
+				if ((data.text != 'Забронировать за 990₽') && (data.text != 'Оставить контакты'))
+					span.ink.animate
+		// a(href=""+data.href+"" class=""+data.classList+"" onclick=""+data.clickFunc+"")= data.text
+
+
 
 
 //- number, title, short, src, pictureClass, imgClass, alt, bullet, result
