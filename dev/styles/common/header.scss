@@ -21,7 +21,7 @@ header{
 }
 
 .burger{
-	position: fixed;
+	position: absolute;
 	top: 18px;
 	right: 24px;
 	z-index: 50;
@@ -31,6 +31,13 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
+}
+.header-burger_wrap{
+	width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    max-width: 768px;
 }
 .burger-line, .burger-line:before, .burger-line:after{
 	display: block;
@@ -149,14 +156,14 @@ header{
 		padding-left: 0;
 		min-width: 210px;
 	}
-	.burger{
+	/*.burger{
 		right: unset;
 		left: 74%;
-	}
+	}*/
 	.burger-line:before,
 	.burger-line:after,
 	.burger-line{
-		background-color: var(--c-bg-l);
+		background-color: #cecece;
 	}
 
 }

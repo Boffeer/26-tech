@@ -4,7 +4,7 @@ const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 const pugLinter = require('gulp-pug-linter');
 const htmlValidator = require('gulp-w3c-html-validator');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass') ;
     sass.compiler = require('node-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
@@ -137,27 +137,27 @@ const imgMultiply = () => {
 						rename: { suffix: "@2" },
 					},
 				],				
-				'**/*.jpg':[
-					{ 
-						width: '90%',
-						progressive: true, 
-					},
-					{ 
-						width: '80%',
-						format: 'webp', 
-					},
-					{
-						withoutEnlargement: false,
-						// width: '200%',
-						rename: { suffix: "@2" },
-					},
-					{
-						withoutEnlargement: false,
-						// width: '200%',
-						format: 'webp',
-						rename: { suffix: "@2" },
-					},
-				],
+				// '**/*.jpg':[
+				// 	{ 
+				// 		width: '90%',
+				// 		progressive: true, 
+				// 	},
+				// 	{ 
+				// 		width: '80%',
+				// 		format: 'webp', 
+				// 	},
+				// 	{
+				// 		withoutEnlargement: false,
+				// 		// width: '200%',
+				// 		rename: { suffix: "@2" },
+				// 	},
+				// 	{
+				// 		withoutEnlargement: false,
+				// 		// width: '200%',
+				// 		format: 'webp',
+				// 		rename: { suffix: "@2" },
+				// 	},
+				// ],
 
 			})
 		)
@@ -277,6 +277,19 @@ const build= gulp.series(
 exports.build = build;
 // ---- build ----
 
+
+
+// ==== edit ====
+const edit= gulp.series(
+	gulp.parallel(
+		pug2html,
+		styles,
+		scripts,
+	)
+);
+
+exports.edit = build;
+// ---- edit ----
 
 // // HTML
 // const html = () => {

@@ -400,13 +400,12 @@ block content
 					href: "https://katyschool.ru/starting",
 					classList: "e-button pricing-item_cta pricing-item_cta--noob",
 					text: 'Оплатить полностью',
-					clickFunc: "ym("+ymTag+",'reachGoal','all-full-payment'); ym("+ymTag+",'reachGoal','all-book-and-order');"
+					clickFunc: "ym('70016527','reachGoal','click-begginer-pack'); ym('70016527','reachGoal','all-full-payment'); ym('70016527','reachGoal','all-book-and-order');"
 				})
 				+btn({
 					href: "https://katyschool.ru/starting_prepayment",
 					classList: "pricing-item_book pricing-item_book--noob",
-					ymName: "'click-book-begginer-pack'",
-					ymTag: "'70016527'",
+					clickFunc: "ym('70016527','reachGoal','click-book-begginer-pack'); ym('70016527','reachGoal','all-book'); ym('70016527','reachGoal','all-book-and-order');",
 					text: 'Забронировать за 990₽'
 				})
 				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
@@ -445,18 +444,31 @@ block content
 				p.pricing-item-price_old 16 000₽
 				//- button.e-button.pricing-item_cta.pricing-item_cta--base Оплатить полностью
 				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
+				//- +btn({
+				//- 	href: "https://katyschool.ru/professional",
+				//- 	classList: "e-button pricing-item_cta pricing-item_cta--base",
+				//- 	ymName: "'click-pro-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Оплатить полностью',
+				//- })
+				//- +btn({
+				//- 	href: "https://katyschool.ru/professional_prepayment",
+				//- 	classList: "pricing-item_book pricing-item_book--noob",
+				//- 	ymName: "'click-book-pro-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Забронировать за 990₽'
+				//- })
+
 				+btn({
 					href: "https://katyschool.ru/professional",
-					classList: "e-button pricing-item_cta pricing-item_cta--base",
-					ymName: "'click-pro-pack'",
-					ymTag: "'70016527'",
+					classList: "e-button pricing-item_cta pricing-item_cta--noob",
 					text: 'Оплатить полностью',
+					clickFunc: "ym('70016527','reachGoal','click-pro-pack'); ym('70016527','reachGoal','all-full-payment'); ym('70016527','reachGoal','all-book-and-order');"
 				})
 				+btn({
 					href: "https://katyschool.ru/professional_prepayment",
 					classList: "pricing-item_book pricing-item_book--noob",
-					ymName: "'click-book-pro-pack'",
-					ymTag: "'70016527'",
+					clickFunc: "ym('70016527','reachGoal','click-book-pro-pack'); ym('70016527','reachGoal','all-book'); ym('70016527','reachGoal','all-book-and-order');",
 					text: 'Забронировать за 990₽'
 				})
 
@@ -478,20 +490,34 @@ block content
 					span.pricing-item_gift-text--caption (при пролной оплате курса)
 				p.pricing-item-price_new 13 990 ₽
 				p.pricing-item-price_old 32 000 ₽
+				//- +btn({
+				//- 	href: "https://katyschool.ru/business",
+				//- 	classList: "e-button pricing-item_cta pricing-item_cta--pro",
+				//- 	ymName: "'click-business-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Оплатить полностью'
+				//- })
+				//- +btn({
+				//- 	href: "https://katyschool.ru/business_prepayment",
+				//- 	classList: "pricing-item_book pricing-item_book--noob",
+				//- 	ymName: "'click-book-business-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Забронировать за 990₽'
+				//- })
 				+btn({
 					href: "https://katyschool.ru/business",
-					classList: "e-button pricing-item_cta pricing-item_cta--pro",
-					ymName: "'click-business-pack'",
-					ymTag: "'70016527'",
-					text: 'Оплатить полностью'
+					classList: "e-button pricing-item_cta pricing-item_cta--noob",
+					text: 'Оплатить полностью',
+					clickFunc: "ym('70016527','reachGoal','click-business-pack'); ym('70016527','reachGoal','all-full-payment'); ym('70016527','reachGoal','all-book-and-order');"
 				})
 				+btn({
 					href: "https://katyschool.ru/business_prepayment",
 					classList: "pricing-item_book pricing-item_book--noob",
-					ymName: "'click-book-business-pack'",
-					ymTag: "'70016527'",
+					clickFunc: "ym('70016527','reachGoal','click-book-business-pack'); ym('70016527','reachGoal','all-book'); ym('70016527','reachGoal','all-book-and-order');",
 					text: 'Забронировать за 990₽'
 				})
+
+
 				//- button.e-button.pricing-item_cta.pricing-item_cta--pro Оплатить полностью
 				//- button.pricing-item_book.pricing-item_book--noob Забронировать за 990₽
 
@@ -510,18 +536,34 @@ block content
 						p.pricing-item_text Неограниченная поддержка Екатерины + Личный коучинг&nbsp;с&nbsp;Екатериной (личные созвоны по телефону и помощь)
 				p.pricing-item-price_new 29 990 ₽
 				p.pricing-item-price_old 35 000 ₽
+				//- +btn({
+				//- 	href: "https://katyschool.ru/vip",
+				//- 	classList: "e-button pricing-item_cta pricing-item_cta--pro",
+				//- 	ymName: "'click-vip-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Оплатить полностью'
+				//- })
+				//- +btn({
+				//- 	href: "https://katyschool.ru/vip_prepayment",
+				//- 	classList: "pricing-item_book pricing-item_book--noob",
+				//- 	ymName: "'click-book-vip-pack'",
+				//- 	ymTag: "'70016527'",
+				//- 	text: 'Забронировать за 990₽'
+				//- })
+
+
+
+
 				+btn({
 					href: "https://katyschool.ru/vip",
-					classList: "e-button pricing-item_cta pricing-item_cta--pro",
-					ymName: "'click-vip-pack'",
-					ymTag: "'70016527'",
-					text: 'Оплатить полностью'
+					classList: "e-button pricing-item_cta pricing-item_cta--noob",
+					text: 'Оплатить полностью',
+					clickFunc: "ym('70016527','reachGoal','click-vip-pack'); ym('70016527','reachGoal','all-full-payment'); ym('70016527','reachGoal','all-book-and-order');"
 				})
 				+btn({
 					href: "https://katyschool.ru/vip_prepayment",
 					classList: "pricing-item_book pricing-item_book--noob",
-					ymName: "'click-book-vip-pack'",
-					ymTag: "'70016527'",
+					clickFunc: "ym('70016527','reachGoal','click-book-vip-pack'); ym('70016527','reachGoal','all-book'); ym('70016527','reachGoal','all-book-and-order');",
 					text: 'Забронировать за 990₽'
 				})
 				//- button.e-button.pricing-item_cta.pricing-item_cta--pro Оплатить полностью
@@ -586,7 +628,7 @@ block content
 			+btn({
 				href: "#pricing",
 				classList: "e-button unique_cta",
-				ymName: "'click-unique'",
+				ymName: "'unique_cta'",
 				ymTag: "'70016527'",
 				text: 'Принять участие'
 			})

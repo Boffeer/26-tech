@@ -2,17 +2,18 @@ header
 	a(href="#hero").logo
 		+pic({src: "img/1-hero/logo", pictureClass: 'logo_pic'})
 		span.logo_text Кондитерская школа<br>Екатерины Мулюковой
-	label.burger(for="burger")
-		input(type="checkbox" name="burger")#burger
-		.burger-menu_wrap
-			.burger-menu
-				+pic({src: "img/1-hero/logo", pictureClass: 'logo_pic burger_logo'})
-				a(href="#for-you").burger-menu_link Для кого этот курс
-				a(href="#programm").burger-menu_link Программа курса
-				a(href="#testimonials").burger-menu_link Отзывы
-				a(href="#pricing").burger-menu_link Цены курса
-				a(href="#idea").burger-menu_link Моя большая идея
-				a(href="#unique").burger-menu_link В чем уникальность курса?
-				a(href="#faq").burger-menu_link Частые вопросы
-				a(href="#doubt").burger-menu_link Хотите участвовать, но сомниваетсь
-		span.burger-line
+	.header-burger_wrap
+		label.burger(for="burger")
+			input(type="checkbox" name="burger")#burger
+			.burger-menu_wrap
+				.burger-menu
+					+pic({src: "img/1-hero/logo", pictureClass: 'logo_pic burger_logo'})
+					a(href="#for-you").burger-menu_link Для кого этот курс
+					a(href="#programm").burger-menu_link Программа курса
+					a(href="#testimonials").burger-menu_link Отзывы
+					a(href="#pricing").burger-menu_link Цены курса
+					a(href="#idea").burger-menu_link Моя большая идея
+					a(href="#unique").burger-menu_link В чем уникальность курса?
+					a(href="#faq").burger-menu_link Частые вопросы
+					a(href="#doubt").burger-menu_link Хотите участвовать, но сомниваетсь
+			span.burger-line

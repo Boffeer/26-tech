@@ -114,5 +114,5 @@ for (let i = 0; i < burgerItem.length; i++){
 // })
 
 
-// "ym("+ymTag+",'reachGoal','all-full-payment'); ym("+ymTag+",'reachGoal','all-book-and-order');"
-// "ym("+ymTag+",'reachGoal','all-book'); ym("+ymTag+",'reachGoal','all-book-and-order');"
+// "ym('70016527','reachGoal','click-begginer-pack'); ym('70016527','reachGoal','all-full-payment'); ym('70016527','reachGoal','all-book-and-order');"
+// "ym('70016527','reachGoal','click-book-begginer-pack'); ym('70016527','reachGoal','all-full-payment'); ym('70016527','reachGoal','all-book-and-order');"
